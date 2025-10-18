@@ -36,6 +36,25 @@ This bar graph shows the citizenship status of the top 5 countries in the data. 
 
 This pie chart goes hand-in-hand with the bar graph above. I wanted to show that the top 5 countries make up a signifcant majority of total arrests. I may consider combining these two visualizations though, since both are quite simple. 
 
+![Departure Country](../charts/departure_country.svg)
+
+This one is going to get cut from the final product. I made this chart because I was curious if there was a notable discrepancy between citizenship country and departure country, but there was not.
+
+![Apprehension Method](../charts/heatmap_method.svg)
+
+This heatmap shows the frequency of each apprehension method by arrest year. It is currently somewhat misleading because 2023 and 2025 are partial years, so I will probably normalize this by year. Either way, it shows that the Criminal Alien Program (CAP) is the primary apprehension method. 
+
+![Age Histogram](../charts/age_histogram.svg)
+
+I wanted to include some demographic information. This graph shows that the average age of persons arrested is around the mid-30s. There is also gender information, which I may consider including here or creating a secondary chart for. 
+
+![Share of Deportations](../charts/pie_deportations.svg)
+
+This pie chart shows that the majority of arrests result in deportations. The next chart takes the "yes" slice from this chart to show additional information. For this pie chart and the one before, I plan on including some sort of imagery (e.g., box, arrow)
+
+![Share of Deportations](../charts/density_days.svg)
+
+Of the total deportations, this density chart shows the distribution of days between arrest and departure from the US. On average, it takes almost two months from being arrested to deported. 
 
 
 ## What form do you envision your final narrative taking? (e.g. An article incorporating the images? A poster? An infographic?)

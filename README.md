@@ -26,12 +26,10 @@ The goal of the project is to **communicate changes in ICE enforcement visually*
 
 ```
 ├── README.md
-├── data
-│   └── arrests-latest.xlsx
 ├── milestones
 │   └── static_draft.md
 ├── src
-│   └── graphs.ipynb
+│   └── create_charts.ipynb
 ├── static-viz
 │   ├── charts
 │   │   ├── age_histogram.svg
@@ -46,7 +44,6 @@ The goal of the project is to **communicate changes in ICE enforcement visually*
 │   │   ├── pie_top10_countries.svg
 │   │   └── time_diff_countries_unknown.svg
 │   └── report.html
-└── uv.lock
 ```
 
 ## Data Sources

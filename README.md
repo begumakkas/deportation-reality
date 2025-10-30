@@ -56,7 +56,19 @@ The goal of the project is to **communicate changes in ICE enforcement visually*
   Accessed via the [Deportation Data Project](https://deportationdata.org/data/ice.html).  
 
 ## References
+I consulted several sources when building the narrative for the project. 
 
+- **American Immigration Council (2025).**  
+  [*Congress Approves Unprecedented Funding for Mass Detention and Deportation*](https://www.americanimmigrationcouncil.org/press-release/congress-approves-unprecedented-funding-mass-detention-deportation-2025/)  
+
+- **U.S. Department of Justice (2025).**  
+  [*Federal Register Notices, 2025*](https://www.justice.gov/eoir/federal-register-notices-2025?utm_source=chatgpt.com)  
+
+- **CBS News (2025).**  
+  [*What Records Show About Migrants Sent to Salvadoran Prison – 60 Minutes Transcript*](https://www.cbsnews.com/news/what-records-show-about-migrants-sent-to-salvadoran-prison-60-minutes-transcript/)  
+
+- **Human Rights Watch (2025).**  
+  [*US/El Salvador: Venezuelan Deportees Forcibly Disappeared*](https://www.hrw.org/news/2025/04/11/us/el-salvador-venezuelan-deportees-forcibly-disappeared)  
 
 ---
 
@@ -64,8 +76,7 @@ The goal of the project is to **communicate changes in ICE enforcement visually*
 
 - Built with **HTML + CSS grid layouts** for responsive poster formatting.  
 - Charts created with **Altair** and exported as **SVG** files for print-quality resolution.  
-- Poster optimized for **17 × 27 inch full-bleed printing (no margins)**.  
-- Color themes emphasize clarity and contrast, using light blue and sand backgrounds for visual grouping.  
+- Poster sized **17 × 27 inch and full-bleed printing (no margins)**.  
 
 ---
 

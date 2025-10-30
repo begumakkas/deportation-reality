@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICE Arrests - Poster</title>
+
+<style>
+  html, body {
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+
+  .page {
+    /* global width settings + right column variable */
+    --right-col: 35%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Base container grid for rows */
+  .container {
+    display: grid;
+    grid-template-columns: var(--c1, 40%) var(--c2, 40%) var(--right-col);
+    gap: 1.5rem;
+    align-items: start;
+    margin-block: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .col { min-width: 0; }
+
+  .col img,
+  .col svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Blue panel for right column sections */
+  .right-panel-bg {
+    background: #eaf2fb;
+    border: 1px solid #b7c7d6;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  /* Optional variation for stacked merges */
+  .right-panel-bg.merge-down {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  /* Nested grid for 3-box layout (used in right column panels) */
+  .panel-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "top top"
+      "left right";
+    gap: 1.25rem;
+    column-gap: 1rem;
+  }
+
+  .panel-3 .top { grid-area: top; }
+  .panel-3 .left { grid-area: left; }
+  .panel-3 .right { grid-area: right; }
+
+  /* White background "card" used for blurbs inside colored panels */
+  .note,
+  .panel-note {
+    background: #fff;
+    border: 1px solid #b7c7d6;
+    border-radius: 6px;
+    padding: 0.75rem;
+    line-height: 1.35;
+  }
+
+  /* remove outer wrapper styling for rows with internal color panels */
+  .row-bg {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .row-bg > .container {
+    background: #fff8ef; /* light orange row background */
+    border: 1px solid #f1d5b0;
+    border-radius: 4px;
+    padding-block: 0.75rem;
+    padding-inline: 0;
+    box-sizing: border-box;
+  }
+
+  /* Blue panel for the combined stacked area + heatmap section */
+  .blue-panel {
+    background: #eaf2fb;
+    border: 1px solid #b7c7d6;
+    border-radius: 4px;
+    padding: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  /* Three-column layout within blue panel */
+  .blue-grid {
+    display: grid;
+    grid-template-columns: 52% 23% 25%; /* chart | blurb | heatmap */
+    gap: 1rem;
+    align-items: start;
+  }
+
+  /* full-width element spanning all 3 columns (for text below charts) */
+  .blue-grid .span-all {
+    grid-column: 1 / -1;
+  }
+
+  /* compact text card for blue sections */
+  .panel-note {
+    background: #fff;
+    border: 1px solid #b7c7d6;
+    border-radius: 6px;
+    padding: 0.75rem;
+    line-height: 1.35;
+  }
+
+
+    /*print PDF style*/
+    @page {
+    size: 17in 27in;       /* Tabloid landscape */
+    margin: 0;         /* printable margins */
+    }
+
+    @media print {
+
+    /* Ensure colors and backgrounds render in print */
+    html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Lock the poster canvas to the printable area:
+        page width (17in) - left/right margins (.5in + .5in) = 16in */
+    .page {
+        width: 16in;         /* Keep this synced to @page size & margins */
+        margin: 0 auto;
+        padding: 0.25in 0;   /* small internal breathing room */
+    }
+
+    /* Reduce spacing for tighter, poster-like layout */
+    .container { gap: 0.6rem; margin-block: 0.6rem; }
+    .panel-3 { gap: 0.8rem; }
+    .blue-grid { gap: 0.8rem; }
+
+    /* Prevent important blocks from splitting */
+    .container,
+    .right-panel-bg,
+    .row-bg,
+    .blue-grid,
+    .note,
+    .avoid-break {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Images/SVGs print crisp */
+    img, svg {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    /* Optional: lighten body color on print for readability */
+    body { color: #111; }
+
+    /* Optional: if the screen max-width constrained your layout,
+        remove it for print (the .page width above drives sizing). */
+    .page { max-width: none; }
+    }
+
+</style>
+
+</head>
+
+
+<body>
+  <div class="page">
+    <!-- Site Title -->
+    <header class="banner title">
+      <h1>ICE Arrests: A Look at the Last Two Years (September 2023-June 2025)</h1>
+      <h4>  ICE activity has surged since President Trump's return to office, 
+        driven by renewed anti-immigration initiatives including expanded 
+        detention centers and aggressive worksite enforcement. This page 
+        visualizes how arrests have evolved since late 2023, where they occur, 
+        and who is being detained.
+      </h4>
+    </header>
+
+    <!-- Row 1 -->
+    <div class="container" style="--c1:40%; --c2:25%;">
+      <div class="col">
+        <img src="charts/arrests_over_time.svg" alt="Monthly arrests time series">
+      </div>
+      <div class="col">
+        <p> Arrest activity remained relatively steady through late 2024, 
+            averaging around 10,000 arrests per month. Following the January 2025 
+            inauguration, enforcement accelerated rapidly — 
+            <strong style="color:rgb(169, 47, 47)">surpassing 25,000 
+            monthly arrests by June 2025.</strong> This spike coincides with new policy 
+            directives emphasizing interior enforcement and expansion of detention 
+            capacity. 
+        </p>
+        <p>The rate of arrests has likely increased since June 2025,
+            after the U.S. Senate bassed a bill that quadrupled ICE's budget. </p>
+      </div>
+      <!-- blue panel #1 (pie) -->
+      <div class="col right-panel-bg merge-down">
+        <img src="charts/pie_top10_countries.svg" alt="Top 10 countries pie chart">
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="container" style="--c1:15%; --c2:50%;">
+      <div class="col">
+        <p>
+          Texas, Florida, and California record the highest total arrest counts
+          nationwide. <strong style="color:rgb(169, 47, 47)">
+          Texas alone accounts for roughly 24 percent of all ICE arrests,</strong>
+          while the three states combined represent 41 percent of national arrests.
+          In comparison, these states make up only 28 percent of the U.S. population,
+          indicating that enforcement activity was disproportionately concentrated
+          in a few large states in the U.S. South.
+        </p>
+      </div>
+
+      <div class="col">
+        <img src="charts/arrests_by_state.svg" alt="Arrests by state map">
+      </div>
+
+      <!-- blue panel #2 (three-box layout), merged to the box above -->
+      <div class="col right-panel-bg">
+        <div class="panel-3">
+            <div class="box top">
+            <div class="note">
+                The pie chart above shows that the top ten countries of origin make up
+                89% of total arrests. In the bar chart below, the top ten countries 
+                are broken down.
+            </div>
+            </div>
+
+            <div class="box left">
+            <img src="charts/citizenship_country.svg" alt="Top 10 countries bar chart">
+            </div>
+
+            <div class="box right">
+            <div class="note">
+                <strong style="color:rgb(169, 47, 47)">
+                The vast majority of ICE arrests involve migrants from Latin America.</strong>
+                Particularly Mexico, which makes up a disproportionate share of
+                arrests in the past two years. 
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+    <!-- Row 3 -->
+        <div class="container" style="grid-template-columns: 30% 20% 30% 20%;">
+        <div class="col">
+            <img src="charts/pie_deportations.svg" alt="Arrests by state map">
+        </div>
+        <div class="col">
+            <p><strong style="color:rgb(169, 47, 47)">93% of ICE arrests resulted
+                in deportations.</strong> Only 7% of 
+                individuals arrested by ICE were not deported. 
+            </p>
+            <p>The density graph on the right looks at the population of deported 
+                individuals to see what the distribution of time is from arrest 
+                to departure. 
+            </p>
+        </div>
+        <div class="col">
+            <img src="charts/density_days.svg" alt="Arrests by state map">
+        </div>
+        <div class="col">
+            <p>Among those who were deported, removals occured quickly for most
+                individuals. <strong style="color:rgb(169, 47, 47)">The 
+                average time from arrest to deportation is almost 
+                two months</strong>, but the majority of cases were completed 
+                within the first few weeks. 
+            </p>
+            <p>Seen below, the average age of an arrested person is 34 and the 
+                vast majority of arrestees are male. 
+            </p>
+        </div>
+    </div>
+
+    <!-- Row 4: Stacked area • Blurb • Age chart -->
+    <div class="container" style="--c1:50%; --c2:20%; --right-col:30%;">
+    <!-- Stacked area chart -->
+    <div class="col">
+        <img src="charts/time_diff_countries_unknown.svg" alt="Origin vs Departure stacked area">
+    </div>
+
+    <!-- Stacked area blurb -->
+    <div class="col">
+        <p>
+        This chart shows total ICE arrests over time, categorized by whether the
+        <em>deportation departure country matched the individual's citizenship</em>. 
+        <strong style="color:rgb(169, 47, 47)">Most deported individuals go to 
+        their country of origin.</strong> However, there is 
+        a large population with unknown departure or citizenship country information.
+        Additionally, those who are <strong style="color:rgb(169, 47, 47)">
+        sent to a country different from their origin
+        make up only 2% of total arrests</strong> during this time period. The heatmap 
+        below further unpacks this population to understand where people are from 
+        and going to. 
+        </p>
+    </div>
+
+    <!-- Age chart -->
+    <div class="col">
+        <img src="charts/age_histogram.svg" alt="Distribution of arrests by age and gender">
+    </div>
+    </div>
+
+    <!-- Row 5: Heatmap • Text (spans 2 cols) inside blue panel -->
+    <div class="blue-grid" style="grid-template-columns: 55% 22.5% 22.5%;">
+    <!-- Heatmap -->
+    <div class="col">
+        <img src="charts/diff_countries_heatmap.svg" alt="Deportations where destination differs from citizenship">
+    </div>
+
+    <!-- Text spans columns 2 and 3 -->
+    <div class="col" style="grid-column: 2 / span 2;">
+
+        <div class="note" style="margin-bottom: 0.75rem;">
+        <p>The heatmap highlights the <strong>top seven citizenship-departure pairings</strong>
+        when destinations differ from citizenship. Mexico, Guatemala, and Honduras appear
+        frequently as both origins and destinations.</p>
+        <p>For the top six citizenship countries, <strong style="color:rgb(169, 47, 47)">
+            Honduras and El Salvador receive many deportees after Mexico.</strong> 
+            It appears that more people not native to
+            Honduras and El Salvador are being sent to these two countries. 
+        </p>
+        <p>El Salvador has recently been one of the primary destinations for 
+            deportees, especially since early 2025 when the U.S. government 
+            made a deal to deport non-Salvadoran migrants to El Salvador 
+            in exchange for monetary compensation. 
+        </p>
+        </div>
+
+        <!-- References -->
+        <p><strong>Data</strong></p>
+        <p>Government data provided by ICE in response to a FOIA request
+            to the Deportation Data Project and analyzed by Begum Akkas.
+        </p>
+        <p>https://deportationdata.org/data/ice.html</p>
+    </div>
+    </div>
+
+
+</body>
+</html>

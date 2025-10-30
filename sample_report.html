@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICE Arrests - Poster</title>
+
+  <style>
+
+    html, body { margin: 0; }
+
+    .page{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Each existing .container blocks is one row of 3 columns */
+    .container {
+      display: grid;
+      grid-template-columns: 40% 40% 20%; 
+      gap: 1rem;
+      align-items: start;
+      margin-block: 1rem;        /* vertical space between rows */
+      width: 100%;
+    }
+
+    /* Prevent overflow in grid tracks (fixes “overlap” look) */
+    .col{ min-width: 0; }
+
+    /* Keep images/SVGs inside their column */
+    .col img, .col svg{
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Site Title -->
+    <header class="banner title">
+      <h1>ICE Arrests in the US: A Look at the Last Two Years (2023-2025)</h1>
+      <h3>Explanation of website...</h3>
+    </header>
+
+    <div class="container">
+      <div class="col">
+        <img src="charts/arrests_over_time.svg" alt="Monthly arrests time series">
+      </div>
+      <div class="col">
+        <p>Explanation here</p>
+      </div>
+      <div class="col">
+        <img src="charts/pie_top10_countries.svg" alt="Top 10 countries pie chart">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col">
+        <p>Explanation here</p>
+      </div>
+      <div class="col">
+        <img src="charts/arrests_by_state.svg" alt="Arrests by state map">
+      </div>
+      <div class="col">
+        <p>text</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col">
+        <p>Explanation here</p>
+      </div>
+      <div class="col">
+        <img src="charts/arrests_by_state.svg" alt="Arrests by state map">
+      </div>
+      <div class="col">
+        <p>text</p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</body>
+</html>

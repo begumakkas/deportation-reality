@@ -46,11 +46,65 @@ The goal of the project is to **communicate changes in ICE enforcement visually*
 │   └── report.html
 ```
 
+## How to run the HTML
+
+**There are two ways to view or recreate this project:**
+
+#### **Option 1 — View the Poster Locally (no setup required)**
+
+All charts are already saved as `.svg` files in the repository, so you can open the poster immediately:
+
+1. Navigate to the file: `static-viz/report.html`
+2.  Double-click the file to open it directly in your web browser  
+**or** serve it locally for best results:
+```bash
+python3 -m http.server
+# or
+npx serve
+```
+3. Then open in your browser: `http://localhost:8000/static-viz/report.html`
+
+
+#### **Option 2 — Recreate the Charts Using the Source Data**
+To regenerate the charts yourself:  
+1. **Download the Data**
+   - Visit the [Deportation Data Project](https://deportationdata.org/data/ice.html).
+   - Under the *Arrests* dataset, select:
+     - **Start Date**: September 2023
+     - **End Date**: Late July 2025
+   - Download the dataset in Excel (`.xlsx`) format.
+
+2. **Set Up the Project Folder**
+   - In the project root, create a folder named `data/` and save the downloaded file there:  
+     ```
+     data/arrests-latest.xlsx
+     ```
+
+3. **Re-generate the Visuals**
+   - Open the Jupyter notebook:  
+     ```
+     src/graphs.ipynb
+     ```
+   - Run all cells to recreate the charts with **Altair**.  
+   - The generated `.svg` outputs will be saved in:  
+     ```
+     static-viz/charts/
+     ```
+
+4. **View the Updated Poster**
+   - Refresh or reopen:  
+     ```
+     static-viz/report.html
+     ```
+   - Your newly generated charts will appear in the poster.
+
+
 ## Data Sources
 
 - **ICE FOIA Data:**  
   U.S. Immigration and Customs Enforcement (ICE) data provided through a **Freedom of Information Act (FOIA)** request.  
   Accessed via the [Deportation Data Project](https://deportationdata.org/data/ice.html).  
+
 
 ## References
 I consulted several sources when building the narrative for the project. 

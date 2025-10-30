@@ -146,9 +146,9 @@
     /* Lock the poster canvas to the printable area:
         page width (17in) - left/right margins (.5in + .5in) = 16in */
     .page {
-        width: 16in;         /* Keep this synced to @page size & margins */
+        width: 16in;        
         margin: 0 auto;
-        padding: 0.25in 0;   /* small internal breathing room */
+        padding: 0.25in 0;   
     }
 
     /* Reduce spacing for tighter, poster-like layout */
@@ -173,11 +173,7 @@
         filter: none;
     }
 
-    /* Optional: lighten body color on print for readability */
     body { color: #111; }
-
-    /* Optional: if the screen max-width constrained your layout,
-        remove it for print (the .page width above drives sizing). */
     .page { max-width: none; }
     }
 
